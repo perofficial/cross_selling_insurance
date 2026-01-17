@@ -253,18 +253,12 @@ With optimized targeting:
 ## 📁 Project Structure
 
 ```
-insurance-cross-selling/
+cross_selling_insurance/
 │
 ├── insurance_cross_sell_model.py    # Main pipeline script
 ├── README.md                         # Project documentation
 ├── requirements.txt                  # Python dependencies
 ├── LICENSE                          # License file
-│
-├── notebooks/                       # Jupyter notebooks (optional)
-│   └── exploratory_analysis.ipynb
-│
-├── docs/                            # Additional documentation
-│   └── methodology.md
 │
 └── results/                         # Saved outputs (optional)
     ├── confusion_matrix.png
