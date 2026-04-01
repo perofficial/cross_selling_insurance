@@ -195,20 +195,22 @@ Total features after engineering: 13
 Training set: 304887 samples
 Test set: 76222 samples
 
-Optimal Threshold: 0.3456
-Best F1 Score: 0.4127
+Optimal Threshold: 0.6664
+Best F1 Score: 0.4500
 
 Classification Report:
               precision    recall  f1-score   support
 
-           0       0.91      0.88      0.89     68063
-           1       0.34      0.42      0.38      8159
+           0       0.96      0.76      0.85     66880
+           1       0.31      0.80      0.45      9342
 
-    accuracy                           0.82     76222
-   macro avg       0.62      0.65      0.63     76222
-weighted avg       0.84      0.82      0.83     76222
+    accuracy                           0.76     76222
+   macro avg       0.64      0.78      0.65     76222
+weighted avg       0.88      0.76      0.80     76222
 
-ROC-AUC Score: 0.8347
+ROC-AUC Score: 0.8464
+Positive Predictions (Cross-Sell Yes): 23707
+Prediction Rate: 31.10%
 ```
 
 ### Custom Configuration
@@ -227,25 +229,28 @@ DATASET_URL = "..."       # Dataset location
 
 | Metric | Value | Description |
 |--------|-------|-------------|
-| **ROC-AUC** | ~0.83 | Overall discrimination ability |
-| **F1 Score** | ~0.41 | Balance of precision and recall |
-| **Precision (Class 1)** | ~0.34 | Accuracy of positive predictions |
-| **Recall (Class 1)** | ~0.42 | Coverage of actual positives |
-| **Accuracy** | ~0.82 | Overall correct predictions |
+| **ROC-AUC** | 0.8464 | Overall discrimination ability |
+| **F1 Score (Class 1)** | 0.45 | Balance of precision and recall |
+| **Precision (Class 1)** | 0.31 | Accuracy of positive predictions |
+| **Recall (Class 1)** | 0.80 | Coverage of actual positives |
+| **Accuracy** | 0.76 | Overall correct predictions |
+| **Optimal Threshold** | 0.6664 | Custom decision boundary (vs default 0.5) |
+| **Prediction Rate** | 31.10% | Share of customers flagged for cross-sell |
 
 ### Performance Insights
 
-- **Strong ROC-AUC (0.83)**: Model effectively separates classes
-- **Optimized F1 Score**: Balanced precision-recall tradeoff for business use case
-- **Class Imbalance Handled**: Recall on minority class (cross-sell acceptance) significantly improved
-- **Threshold Tuning Impact**: Custom threshold outperforms default 0.5 threshold
+- **Strong ROC-AUC (0.8464)**: The model has solid discriminative power, correctly ranking positive customers above negative ones 84.6% of the time.
+- **High Recall (0.80)**: The model identifies 80% of customers genuinely interested in cross-selling — the priority metric in this business context, where missing an opportunity is more costly than a false positive.
+- **Moderate Precision (0.31)**: 1 in 3 flagged customers converts, which is acceptable given the low marginal cost of outreach campaigns.
+- **Threshold Tuning (0.6664)**: Raising the threshold above the default 0.5 significantly boosted recall, shifting the model toward a high-coverage strategy suited for broad marketing campaigns.
+- **Class Imbalance Handled**: Despite the imbalanced dataset (~12% positive class), the model achieves balanced performance through `class_weight='balanced'` and threshold optimization.
 
 ### Business Impact
 
-With optimized targeting:
-- **42% recall** means capturing 42% of potential cross-sell opportunities
-- **34% precision** reduces marketing waste by targeting likely customers
-- **Cost-efficiency**: ROI improved by focusing resources on high-propensity segments
+Out of 76,222 test customers:
+- **23,707 flagged** for cross-sell outreach (31.1% of the base)
+- **80% recall** means only 1 in 5 genuinely interested customers is missed
+- **High coverage strategy**: prioritizes capturing opportunities over precision, ideal for low-cost email/phone campaigns where broad reach maximizes ROI
 
 ## 📁 Project Structure
 
