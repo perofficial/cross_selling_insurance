@@ -247,7 +247,7 @@ DATASET_URL = "..."       # Dataset location
 - **Class Imbalance Handled**: Despite the imbalanced dataset (~12% positive class), the model achieves balanced performance through `class_weight='balanced'` and threshold optimization.
 
 ### Confusion matrix
-![Confusion Matrix](confusion_matrix.png)
+![Confusion Matrix](result/confusion_matrix.png)
 
 ### Business Impact
 
