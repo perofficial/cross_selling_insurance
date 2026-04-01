@@ -264,10 +264,10 @@ cross_selling_insurance/
 ├── insurance_cross_sell_model.py    # Main pipeline script
 ├── README.md                         # Project documentation
 ├── requirements.txt                  # Python dependencies
-├── LICENSE                          # License file
+│
 ├── confusion_matrix.png
 └── data/                         # Saved outputs (optional)
-    └── dataset.csv
+    └── insurance_cross_sell.csv
 ```
 
 ## 🛠️ Development Roadmap
