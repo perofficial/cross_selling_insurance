@@ -45,9 +45,6 @@ This machine learning solution delivers tangible business outcomes:
 
 The model is trained on customer behavioral and demographic data from AssurePredict.
 
-
-```
-
 ### Features
 
 | Feature | Description | Type |
