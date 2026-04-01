@@ -261,17 +261,17 @@ Out of 76,222 test customers:
 ```
 cross_selling_insurance/
 │
-├── insurance_cross_sell_model.py    # Main pipeline script
-├── README.md                         # Project documentation
-├── requirements.txt                  # Python dependencies
+├── insurance_cross_sell_model.py        # Main pipeline script
+├── README.md                            # Project documentation
+├── requirements.txt                     # Python dependencies
 │
 ├── confusion_matrix.png
 │
-├── result/
+├── result/                              # Saved outputs
      ├── threshold_optimization.png
 │    └── confusion_matrix.png
-└── data/                         # Saved outputs (optional)
-     └── insurance_cross_sell.csv
+└── data/                         
+     └── insurance_cross_sell.csv        # dataset       
 ```
 
 ## 🛠️ Development Roadmap
