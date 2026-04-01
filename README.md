@@ -266,8 +266,12 @@ cross_selling_insurance/
 ├── requirements.txt                  # Python dependencies
 │
 ├── confusion_matrix.png
+│
+├── result/
+     ├── threshold_optimization.png
+│    └── confusion_matrix.png
 └── data/                         # Saved outputs (optional)
-    └── insurance_cross_sell.csv
+     └── insurance_cross_sell.csv
 ```
 
 ## 🛠️ Development Roadmap
