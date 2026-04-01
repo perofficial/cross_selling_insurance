@@ -213,6 +213,7 @@ Positive Predictions (Cross-Sell Yes): 23707
 Prediction Rate: 31.10%
 ```
 
+
 ### Custom Configuration
 
 Modify configuration variables at the top of the script:
@@ -244,6 +245,9 @@ DATASET_URL = "..."       # Dataset location
 - **Moderate Precision (0.31)**: 1 in 3 flagged customers converts, which is acceptable given the low marginal cost of outreach campaigns.
 - **Threshold Tuning (0.6664)**: Raising the threshold above the default 0.5 significantly boosted recall, shifting the model toward a high-coverage strategy suited for broad marketing campaigns.
 - **Class Imbalance Handled**: Despite the imbalanced dataset (~12% positive class), the model achieves balanced performance through `class_weight='balanced'` and threshold optimization.
+
+### Confusion matrix
+!![Confusion Matrix](confusion_matrix.png)
 
 ### Business Impact
 
