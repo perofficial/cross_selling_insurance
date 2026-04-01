@@ -33,7 +33,7 @@ from sklearn.metrics import (
 # Configuration
 RANDOM_SEED = 42
 TEST_SIZE = 0.2
-DATASET_URL = "https://proai-datasets.s3.eu-west-3.amazonaws.com/insurance_cross_sell.csv"
+DATASET_URL = "data/insurance_cross_sell.csv"
 
 # Plotting configuration
 sns.set_style("whitegrid")
