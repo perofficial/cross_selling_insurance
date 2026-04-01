@@ -265,10 +265,9 @@ cross_selling_insurance/
 ├── README.md                         # Project documentation
 ├── requirements.txt                  # Python dependencies
 ├── LICENSE                          # License file
-│
-└── results/                         # Saved outputs (optional)
-    ├── confusion_matrix.png
-    └── threshold_optimization.png
+├── confusion_matrix.png
+└── data/                         # Saved outputs (optional)
+    └── dataset.csv
 ```
 
 ## 🛠️ Development Roadmap
